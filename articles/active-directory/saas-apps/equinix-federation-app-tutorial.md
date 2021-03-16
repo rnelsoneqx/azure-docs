@@ -16,7 +16,7 @@ ms.author: jeedes
 
 # Tutorial: Azure Active Directory single sign-on (SSO) integration with Equinix Federation App
 
-In this tutorial, you'll learn how to integrate Equinix Federation App with Azure Active Directory (Azure AD). When you integrate Equinix Federation App with Azure AD, you can:
+In this tutorial, you'll learn how to integrate Equinix Federation App with Azure Active Directory (Azure AD). When you integrate Equinix Federation App with Azure AD, you can do the following:
 
 * Control in Azure AD who has access to Equinix Federation App.
 * Enable your users to be automatically signed-in to Equinix Federation App with their Azure AD accounts.
@@ -33,7 +33,7 @@ To get started, you need the following items:
 
 In this tutorial, you configure and test Azure AD SSO in a test environment.
 
-* Equinix Federation App supports **SP** initiated SSO
+* Equinix Federation App supports **SP** initiated SSO, not **IdP** initiated SSO.
 
 ## Adding Equinix Federation App from the gallery
 
@@ -64,7 +64,7 @@ To configure and test Azure AD SSO with Equinix Federation App, perform the foll
 
 Follow these steps to enable Azure AD SSO in the Azure portal.
 
-1. In the Azure portal, on the **Equinix Federation App** application integration page, find the **Manage** section and select **single sign-on**.
+1. In the Azure portal, on the **Equinix Federation App** application integration page, find the **Manage** section, and select **single sign-on**.
 1. On the **Select a single sign-on method** page, select **SAML**.
 1. On the **Set up single sign-on with SAML** page, click the edit/pen icon for **Basic SAML Configuration** to edit the settings.
 
@@ -72,17 +72,14 @@ Follow these steps to enable Azure AD SSO in the Azure portal.
 
 1. On the **Basic SAML Configuration** section, enter the values for the following fields:
 
-	a. In the **Sign on URL** text box, type a URL using the following pattern:
-    `https://<SUBDOMAIN>.equinix.com/sp/ACS.saml2`
+	a. **Sign on URL**
 
-    b. In the **Identifier (Entity ID)** text box, type a URL using the following pattern:
-    `Equinix:<CUSTOM_IDENTIFIER>`
+	b. **Identifier (Entity ID)**
 
-	c. In the **Reply URL** text box, type a URL using the following pattern:
-    `https://<SUBDOMAIN>.equinix.com/sp/ACS.saml2`
+	c.  **Reply URL**
 
 	> [!NOTE]
-	> These values are not real. Update these values with the actual Sign on URL, Identifier and Reply URL. Contact [Equinix Federation App Client support team](mailto:prodsecops@equinix.com) to get these values. You can also refer to the patterns shown in the **Basic SAML Configuration** section in the Azure portal.
+	> Please contact [Equinix Federation App Client support team](mailto:prodsecops@equinix.com) to get these values.
 
 1. On the **Set up single sign-on with SAML** page, in the **SAML Signing Certificate** section,  find **Federation Metadata XML** and select **Download** to download the certificate and save it on your computer.
 
@@ -127,11 +124,9 @@ In this section, you create a user called Britta Simon in Equinix Federation App
 
 In this section, you test your Azure AD single sign-on configuration with following options. 
 
-* Click on **Test this application** in Azure portal. This will redirect to Equinix Federation App Sign-on URL where you can initiate the login flow. 
-
-* Go to Equinix Federation App Sign-on URL directly and initiate the login flow from there.
-
-* You can use Microsoft My Apps. When you click the Equinix Federation App tile in the My Apps, this will redirect to Equinix Federation App Sign-on URL. For more information about the My Apps, see [Introduction to the My Apps](../user-help/my-apps-portal-end-user-access.md).
+* Go to Equinix Federation App Sign-on URL directly, and initiate the login flow from there.
+ > [!NOTE]
+ > If you attempt to test your Azure application by using the **Test this application** link or by clicking the Equinix Federation App tile, it will not work, as that is IdP-initiated SSO, which Equinix does not support by default.  For more information about the My Apps, see [Introduction to the My Apps](../user-help/my-apps-portal-end-user-access.md).
 
 
 ## Next steps
